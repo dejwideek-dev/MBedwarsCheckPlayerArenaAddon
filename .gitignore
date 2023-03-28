@@ -1,0 +1,16 @@
+### Java ###
+# Compiled class file
+*.class
+
+# Package Files #
+*.jar
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Some additional ignores (sort later)
+build
+.gradle
