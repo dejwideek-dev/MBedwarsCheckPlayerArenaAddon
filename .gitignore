@@ -2,9 +2,6 @@
 # Compiled class file
 *.class
 
-# Package Files #
-*.jar
-
 ### IntelliJ IDEA ###
 .idea
 *.iws

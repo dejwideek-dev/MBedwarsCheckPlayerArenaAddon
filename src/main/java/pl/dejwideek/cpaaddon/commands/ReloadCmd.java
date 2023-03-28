@@ -21,7 +21,7 @@ public class ReloadCmd extends BaseCommand {
         this.plugin = plugin;
     }
 
-    @CommandAlias("spectateaddonreload|spectaddonreload|sareload")
+    @CommandAlias("checkplayerarenareload|checkarenareload|cpareload|cpreload")
     @Description("Reload config file")
     public void reload(CommandSender commandSender) {
         if(commandSender instanceof Player) {
