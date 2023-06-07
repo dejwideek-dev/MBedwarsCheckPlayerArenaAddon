@@ -8,10 +8,10 @@ import de.marcely.bedwars.api.BedwarsAPI;
 import de.marcely.bedwars.api.remote.RemoteAPI;
 import de.marcely.bedwars.api.remote.RemoteArena;
 import de.marcely.bedwars.api.remote.RemotePlayer;
-import dev.dejvokep.boostedyaml.YamlDocument;
 import org.bukkit.entity.Player;
 import pl.dejwideek.cpaaddon.CPAPlugin;
 import pl.dejwideek.cpaaddon.color.ColorAPI;
+import pl.dejwideek.cpaaddon.configs.Config;
 
 @SuppressWarnings("ALL")
 public class CheckCmd extends BaseCommand {
@@ -27,15 +27,15 @@ public class CheckCmd extends BaseCommand {
     @Description("Check player arena")
     public void check(Player player, String[] strings) {
         BedwarsAPI.onReady(() -> {
-            YamlDocument config = plugin.config;
+            Config config = plugin.config;
             ColorAPI colorApi = new ColorAPI();
 
-            String permission = plugin.config.getString("permissions.check");
-            String usageMsg = plugin.config.getString("messages.usage");
-            String arenaInfoMsg = plugin.config.getString("messages.arena-info");
-            String noInsideMsg = plugin.config.getString("messages.no-inside-arena");
-            String notFoundMsg = plugin.config.getString("messages.not-found");
-            String noPermsMsg = plugin.config.getString("messages.no-permission");
+            String permission = config.PERMISSIONS.CHECK;
+            String usageMsg = config.MESSAGES.USAGE;
+            String arenaInfoMsg = config.MESSAGES.ARENA_INFO;
+            String noInsideMsg = config.MESSAGES.NO_INSIDE_ARENA;
+            String notFoundMsg = config.MESSAGES.NOT_FOUND;
+            String noPermsMsg = config.MESSAGES.NO_PERMISSION;
 
             if(player.hasPermission(permission)) {
                 if(strings.length == 0) {
