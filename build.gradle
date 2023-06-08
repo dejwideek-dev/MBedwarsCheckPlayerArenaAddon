@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'pl.dejwideek'
-version '2.1.0'
+version '2.1.0-HOTFIX'
 
 repositories {
     mavenCentral()
@@ -38,6 +38,9 @@ shadowJar {
     relocate 'org.jetbrains.annotations', 'pl.dejwideek.cpaaddon.libs.org.jetbrains.annotations'
     relocate 'org.intellij.lang.annotations', 'pl.dejwideek.cpaaddon.libs.org.intellij.lang.annotations'
 }
+
+
+build.dependsOn shadowJar
 
 
 build.dependsOn shadowJar
