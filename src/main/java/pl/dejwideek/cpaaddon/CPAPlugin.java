@@ -14,15 +14,13 @@ public class CPAPlugin extends JavaPlugin {
     private static Path directory;
     public static Config config = Config.IMP;
 
-    public CPAPlugin() {
-        this.directory = new CPAAddon(this)
-                .getDataFolder().toPath();
-        this.configFile = directory.resolve("config.yml").toFile();
-    }
-
     public void onEnable() {
         if(!mbwCheck()) return;
         if(!registerAddon()) return;
+
+        this.directory = new CPAAddon(this)
+                .getDataFolder().toPath();
+        this.configFile = directory.resolve("config.yml").toFile();
 
         reloadConfig();
         new CPAAddon(this).registerCommands();
